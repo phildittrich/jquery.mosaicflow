@@ -105,8 +105,9 @@
 				this.fillColumns();
 
 				// Remove excess columns, only if there are visible columns remaining
-				if (this.columns.filter(':visible').length > 0)
+				if (this.columns.filter(':visible').length > 0) {
 					this.columns.filter(':hidden').remove();
+				}
 			}
 			this.container.css('visibility', 'visible');
 			this.container.trigger('mosaicflow-filled');
